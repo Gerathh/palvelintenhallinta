@@ -118,7 +118,9 @@ Puuuttuu virtualbox. Joten asennnan sen. Repot puuttuu joten:
 
 `sudo apt-get install virtualbox-7.0`
 
-sitten taas vagrant up. Valitti väärästä IP -avaruudesta.
+Sitten taas 
+* vagrant up   
+Valitti väärästä IP -avaruudesta.
 
 ![errror](https://github.com/Gerathh/palvelintenhallinta/blob/main/h24.png)
 
@@ -135,7 +137,8 @@ Jälleen error
 Hyper-V on pois päältä.
 BIOS/UEFI:ssa   AMD-V päällä
 Editoitu rekisteriä että hyper-V ei varmasti ole päällä.   
-Testattu myös 7800x3d prosessorilla. Sama ongelma.
+Testattu myös 7800x3d prosessorilla. Sama ongelma. Olin päättänyt saada tämän toimimaan VirtualBoxilla (7.1.6 r167084 (Qt6.5.3)). Varmaan vagrant olisi toiminut muulla tavalla, kuten winkkarin päällä.   
+En testannut koska vagrant tutttu ja en jaksanut enää tehdä sitä.
 
 
 ![enabloitu](https://github.com/Gerathh/palvelintenhallinta/blob/main/h26.png)
