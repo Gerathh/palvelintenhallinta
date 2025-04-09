@@ -120,7 +120,7 @@ Puuuttuu virtualbox. Joten asennnan sen. Repot puuttuu joten:
 
 sitten taas vagrant up. Valitti väärästä IP -avaruudesta.
 
-     ![errror](https://github.com/Gerathh/palvelintenhallinta/blob/main/h24.png)
+![errror](https://github.com/Gerathh/palvelintenhallinta/blob/main/h24.png)
 
 Joten luettuani virheilmoituksessa olevaa URL osoitetta, tein ohjeiden mukaan ja lisäsin /etc/vbox/networks.conf tiedostoon
      * 10.0.0.0/8 192.168.0.0/16
