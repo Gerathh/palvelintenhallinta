@@ -134,7 +134,8 @@ Jälleen error
 
 Hyper-V on pois päältä.
 BIOS/UEFI:ssa   AMD-V päällä
-Editoitu rekisteriä että hyper-V ei varmasti ole päällä.
+Editoitu rekisteriä että hyper-V ei varmasti ole päällä.   
+Testattu myös 7800x3d prosessorilla. Sama ongelma.
 
 
 ![enabloitu](https://github.com/Gerathh/palvelintenhallinta/blob/main/h26.png)
