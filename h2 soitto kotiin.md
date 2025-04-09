@@ -86,7 +86,7 @@ Se valitti oikeuksien puutteesta joten:
 
 ```
 cd ..
-sudo chmod 777 /twohost/
+sudo chmod 777 /twohost/ #WRONG
 cd twohost/
 ```
 
@@ -161,3 +161,4 @@ Komentoja saltin käyttöön [Salt Quickstart – Salt Stack Master and Slave on
 Vagrantin kaikki komennot ja toiminnot [Documentation | Vagrant | HashiCorp Developer](https://developer.hashicorp.com/vagrant/docs)
 
 
+##Edit 9.4.2025 lisätty error warning.
