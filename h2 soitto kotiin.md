@@ -10,7 +10,7 @@
 
 - Sivusto kertoo miten Vgrant asennetaan
 
-- TRäällä kerrotaan myös miten sitä käytetään
+- Täällä kerrotaan myös miten sitä käytetään
 
 - Erinomaisia troubleshooting juttuja myös
 
@@ -28,7 +28,7 @@
 
 - Hyviä esimerkkejä siiitä miten laajasti salttia voi käyttää.
 
-- tarpeelliset kommmpot löytää täältä
+- Tarpeelliset komennot löytää täältä
 
 
 
