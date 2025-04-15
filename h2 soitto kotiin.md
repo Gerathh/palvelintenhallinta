@@ -146,6 +146,145 @@ En testannut koska vagrant tutttu ja en jaksanut enää tehdä sitä.
 ![vbox](https://github.com/Gerathh/palvelintenhallinta/blob/main/h27.png)
 
 
+### Ongelma oli siis etten voinut asentaa virtualboxin päälle uusia koneita.
+
+## Asennus windowssissa.
+
+Asensin vagrantin. 
+
+    vagrant --version
+![Versio](https://github.com/Gerathh/palvelintenhallinta/blob/main/h28.png)
+
+Ajoin komennon 
+
+
+   `
+vagrant init --minimal
+`
+
+Loi tiedoston Vagrantfile kansioon twohost jonka loin aiemmin.
+Sitten komento:
+
+    winget isntall tree
+
+Muokkasin Vagranfileä seuraavasti:
+Kommentoin linux käskyt 
+
+
+    #-*- mode: ruby -*-
+    #vi: set ft=ruby : 
+    #Copyright 2019-2021 Tero Karvinen
+    
+    http://TeroKarvinen.com
+    
+    $tscript = <<TSCRIPT
+    #set -o verbose
+    #apt-get update
+    #apt-get -y install tree
+    echo "Done - set up test environment - https://terokarvinen.com/search/?q=vagrant"
+    TSCRIPT
+    
+    Vagrant.configure("2") do |config|
+    	config.vm.synced_folder ".", "/vagrant", disabled: true
+    	config.vm.synced_folder "shared/", "/home/vagrant/shared", create: true
+    	config.vm.provision "shell", inline: $tscript
+    	config.vm.box = "debian/bullseye64"
+    config.vm.define "t001" do |t001|
+    		t001.vm.hostname = "t001"
+    		t001.vm.network "private_network", ip: "192.168.88.101"
+    	end
+    #config.vm.define "t002", primary: true do |t002|
+    	#	t002.vm.hostname = "t002"
+    	#	t002.vm.network "private_network", ip: "192.168.88.102"
+    	#end
+    	end   
+    	
+Tämän jälkeen komento 
+
+    vagrant up
+
+![Success](https://github.com/Gerathh/palvelintenhallinta/blob/main/h29.png)
+
+Ajoin komennon
+
+    vagrant destroy
+Ja painoin y ja enter jolloin kone tuhotaan   
+
+---
+## Kaksi uutta konetta
+
+Sen jälkeen otin kommentit pois Vagrantfilen toisen koneen kohdalta. 
+
+![Kommentit pois osasta](https://github.com/Gerathh/palvelintenhallinta/blob/main/h210.png)
+
+Ja ajoin komennon 
+
+    vagrant up
+
+Asentui kaksi konetta.
+
+
+Tehtävän mukaisesti pingasin toisia koneita sekä googlen nimiaalvelinta ja kaikki meni läpi.
+
+![Yhteydet toimii](https://github.com/Gerathh/palvelintenhallinta/blob/main/h211.png)
+
+## Mini ja master
+
+Suoritin seuraavat komennot:
+
+    sudo mkdir -p /etc/apt/keyrings
+    sudo apt update
+    sudo apt install curl
+    curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+    sudo apt install ufw
+    sudo ufw allow 4505
+    sudo ufw allow 4506
+    sudo cat /etc/apt/sources.list.d/salt.list deb [signed-by=/etc/apt/keyrings/salt-archive-keyring.pgp arch=amd64] https://packages.broadcom.com/artifactory/saltproject-deb/ stable main
+    sudo apt update
+    sudo apt install salt-minion
+    
+![minion version](https://github.com/Gerathh/palvelintenhallinta/blob/main/h212.png)
+    
+Lisää ajettavia komentoja:
+
+    sudo salt-call --local -l info state.single pkg.installed tree
+    sudo salt-call --local -l info state.single pkg.removed tree
+    sudo nano /etc/salt/minion
+
+Lisäsin tiedostoon rivin:
+
+    master: 192.168.88.102
+
+    sudo systemctl restart salt-minion
+
+Sitten 
+
+    exit
+
+---
+
+Seuraavaksi master
+
+    vagrant ssh t002
+    sudo apt update
+    sudo mkdir -p /etc/apt/keyrings
+    sudo apt install curl
+    curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp
+    sudo apt install ufw
+    sudo ufw allow 4505
+    sudo ufw allow 4506
+    sudo nano /etc/apt/sources.list.d/salt.list
+    
+Lisäsin sinne rivin:
+
+    deb [signed-by=/etc/apt/keyrings/salt-archive-keyring.pgp arch=amd64] https://packages.broadcom.com/artifactory/saltproject-deb/ stable main
+
+Sitten komennnot
+
+    sudo apt update
+    sudo apt install salt-master
+    sudo systemctl restart salt-minion
+
 
 
 ##### Lähteet
@@ -160,5 +299,7 @@ Komentoja saltin käyttöön [Salt Quickstart – Salt Stack Master and Slave on
 
 Vagrantin kaikki komennot ja toiminnot [Documentation | Vagrant | HashiCorp Developer](https://developer.hashicorp.com/vagrant/docs)
 
+[Apuna windowssin puolella asetusten varmistukseen](https://dev.to/sannae/setting-up-windows-virtual-test-environments-with-vagrant-4k1b)
 
-##Edit 9.4.2025 lisätty error warning.
+## Edit 9.4.2025 lisätty error warning.
+## Edit 15.4.2025 Windowssin kautta asennus
