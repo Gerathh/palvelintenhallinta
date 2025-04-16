@@ -284,6 +284,10 @@ Sitten komennnot
     sudo apt update
     sudo apt install salt-master
     sudo systemctl restart salt-minion
+    sudo salt-key -L
+    sudo salt 't001' test.ping
+    sudo salt 't001' user.add Jere
+    sudo salt 't001' cmd.run 'df -h'
 
 
 
