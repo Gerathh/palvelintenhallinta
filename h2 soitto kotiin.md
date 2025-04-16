@@ -307,5 +307,9 @@ Vagrantin kaikki komennot ja toiminnot [Documentation | Vagrant | HashiCorp Deve
 
 [Apuna windowssin puolella asetusten varmistukseen](https://dev.to/sannae/setting-up-windows-virtual-test-environments-with-vagrant-4k1b)
 
+---
+
+
 ## Edit 9.4.2025 lisätty error warning.
 ## Edit 15.4.2025 Windowssin kautta asennus
+## Edit 16.4.2025 lisätty viimeinen osa jossa masterilta komennan minionia
