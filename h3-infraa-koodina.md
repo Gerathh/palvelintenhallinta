@@ -103,6 +103,8 @@ Tarkistan toimivuuden:
 
 ### Lähteet
 
-[Tero Karvinen  Hello Salt Infra-as-Code](https://terokarvinen.com/2024/hello-salt-infra-as-code/)
-[Saltin käyttöohjeet](https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml)
+[Tero Karvinen  Hello Salt Infra-as-Code](https://terokarvinen.com/2024/hello-salt-infra-as-code/)   
+
+[Saltin käyttöohjeet](https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml)   
+
 Yleensäkin nämä sivut olivat hyvät lähteenä https://docs.saltproject.io/
