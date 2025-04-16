@@ -36,7 +36,8 @@ Tänne lisäsin koodin:
 Suoritin komennon:
 
 `
-sudo salt-call --local state.apply hello`
+sudo salt-call --local state.apply hello`   
+
 ![local](https://github.com/Gerathh/palvelintenhallinta/blob/main/h31.png)
 
 Tarkistin että tiedosto oli luotu /tmp/ kansioon.
