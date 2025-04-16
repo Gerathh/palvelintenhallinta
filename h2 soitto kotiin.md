@@ -289,6 +289,8 @@ Sitten komennnot
     sudo salt 't001' user.add Jere
     sudo salt 't001' cmd.run 'df -h'
 
+![Master toimii](https://github.com/Gerathh/palvelintenhallinta/blob/main/h213.png)
+
 
 
 ##### Lähteet
