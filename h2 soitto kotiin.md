@@ -308,6 +308,8 @@ Vagrantin kaikki komennot ja toiminnot [Documentation | Vagrant | HashiCorp Deve
 [Apuna windowssin puolella asetusten varmistukseen](https://dev.to/sannae/setting-up-windows-virtual-test-environments-with-vagrant-4k1b)
 
 ---
+### Aikaa meni noin 7 tuntia
+---
 
 
 ## Edit 9.4.2025 lisätty error warning.
