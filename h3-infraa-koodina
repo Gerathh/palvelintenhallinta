@@ -98,11 +98,7 @@ Tarkistan toimivuuden:
     sudo salt 't001' cmd.run 'cat /home/demo/welcome.txt'
     sudo salt 't001' cmd.run 'systemctl status cron'
 
-![Nain se menee](https://github.com/Gerathh/palvelintenhallinta/blob/main/h35.png)   
-
-  ---
-  ##### aikaa meni noin 2h   
-  ---
+![Nain se menee](https://github.com/Gerathh/palvelintenhallinta/blob/main/h35.png)
 
 ### Lähteet
 
