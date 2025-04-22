@@ -163,13 +163,15 @@ Sain vastauksen
 
 ![sshhh](https://github.com/Gerathh/palvelintenhallinta/blob/main/45.png "sshhh")
 
+### Aikaa meni 3h   
 
 ### Lähteet
 
 https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh   Yleiset ohjeet   
+
 https://docs.saltproject.io/salt/  saltin toiminnnan ohjeet   
 
 
-edit: 22.4 11:42 korjattu kirjoitusvirhe
+edit: 22.4 11:42 korjattu kirjoitusvirhe ja lisätty kesto.
 
 
